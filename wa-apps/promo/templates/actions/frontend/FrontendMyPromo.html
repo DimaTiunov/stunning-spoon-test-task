@@ -1,0 +1,18 @@
+<div class="promo">
+    <h1>Мои промокоды</h1>
+
+    <input type="search" id="promo-search" placeholder="Поиск по примечанию">
+
+    <div id="promo-list">
+        {foreach $redemptions as $r}
+            <div class="redemption">
+                <h3><a href="{$r.id}/">{$r.note}</a></h3>
+                <span class="discount">{$r.discount}</span>
+            </div>
+        {foreachelse}
+            <p>Вы ещё не применяли промокоды.</p>
+        {/foreach}
+    </div>
+</div>
+
+<script src="{$wa_app_static_url}js/promo.js"></script>
